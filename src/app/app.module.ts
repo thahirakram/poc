@@ -10,6 +10,7 @@ import { LoginStudentComponent } from './login-student/login-student.component';
 import { SignupStudentComponent } from './signup-student/signup-student.component';
 import { HomeNavComponent } from './home-nav/home-nav.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -29,7 +30,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

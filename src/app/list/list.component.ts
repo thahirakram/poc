@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListService } from '../services/list.service';
 
 @Component({
   selector: 'app-list',
@@ -7,23 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  data = [
-    {
-      name: 'thahir',
-      id: '1',
-      age: '20',
-    },
-    {
-      name: 'mothil',
-      id: '2',
-      age: '20',
-    },
-    {
-      name: 'rakesh',
-      id: '3',
-      age: '20'
-    }];
-  constructor() { }
+  data = [];
+  
+  constructor(private serv2: ListService) {
+    const ls = this.serv2.getList();
+    ls.subscribe((value: any[]) => {
+      this.data = value
+    })
+   }
 
   ngOnInit() {
   }
