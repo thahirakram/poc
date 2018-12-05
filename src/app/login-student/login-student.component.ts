@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AuthserviceService } from '../services/authservice.service';
 
 @Component({
   selector: 'app-login-student',
@@ -11,9 +12,16 @@ export class LoginStudentComponent implements OnInit {
           Email: ['',Validators.required],
           password: ['',Validators.required],
         });
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+    private authService: AuthserviceService) { }
 
   ngOnInit() {
   }
 
+
+  logIn() {
+    const Email = this.loginForm.value.Email;
+    const password = this.loginForm.value.password;
+    this.authService.logIn({Email, password})
+  }
 }
