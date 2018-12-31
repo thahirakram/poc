@@ -28,11 +28,11 @@ export class AuthserviceService {
       });
   }
 
-  // forgotPass(data) {
-  //   const url = "http://localhost:3000/api/auth/forgot-password";
-  //   return this.http.post(url, data)
-  //     .subscribe((value: any) => {
-  //       this.forgotPass = value;
-  //     });
-  // }
+  forgotPass(data) {
+    const url = "http://localhost:3000/api/auth/forgot-password";
+    return this.http.post(url, data)
+      .subscribe((value: any) => {
+        this.forgotPass = value;
+      });
+  }
 }

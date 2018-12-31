@@ -3,7 +3,7 @@
   <form [formGroup]="loginForm" class="mx-auto" (ngSubmit)="logIn()">
     <div class="form-group">
       <label for="exampleInputEmail1">Email</label>
-      <input type="email" email class="form-control" formControlName="Email" id="exampleInputEmail1" aria-describedby="emailHelp"
+      <input type="email" email class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp"
         placeholder="Enter Your Name">
     </div>
     <div class="form-group">
@@ -13,6 +13,8 @@
     <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Log in</button>
 
   </form>
+  <div class=" mt-3">
+  <a class="text-primary" routerLink="/forgot">Forgot Password?</a>
 
-  <a class="text-white" routerLink="/forgot">Forgot</a>
+  </div>
 </div>

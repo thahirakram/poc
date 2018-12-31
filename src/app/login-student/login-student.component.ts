@@ -9,7 +9,7 @@ import { AuthserviceService } from '../services/authservice.service';
 })
 export class LoginStudentComponent implements OnInit {
         loginForm = this.fb.group({
-          Email: ['',Validators.required],
+          email: ['',Validators.required],
           password: ['',Validators.required],
         });
   constructor(private fb: FormBuilder,
@@ -20,8 +20,8 @@ export class LoginStudentComponent implements OnInit {
 
 
   logIn() {
-    const Email = this.loginForm.value.Email;
+    const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
-    this.authService.logIn({Email, password})
+    this.authService.logIn({email, password})
   }
 }
