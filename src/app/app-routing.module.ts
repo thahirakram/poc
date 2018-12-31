@@ -5,17 +5,22 @@ import { SignupStudentComponent } from './signup-student/signup-student.componen
 import { ListComponent } from './list/list.component';
 import { AuthGuard } from './services/auth.guard';
 import { SecondguardGuard } from './services/secondguard.guard';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: LoginStudentComponent,
-  }, 
+  },
   {
     path: 'signup',
     component: SignupStudentComponent,
     canActivate: [AuthGuard, SecondguardGuard]
-  }, 
+  },
+  {
+    path: 'forgot',
+    component: ForgotPasswordComponent
+  },
   {
     path: 'list',
     component: ListComponent

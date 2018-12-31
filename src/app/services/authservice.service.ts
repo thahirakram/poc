@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ɵConsole } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -15,8 +15,10 @@ export class AuthserviceService {
         this.signUp = value;
 
       });
+      
 
   }
+  
 
   logIn(data) {
     const url = "http://localhost:3000/api/auth/login";
@@ -25,4 +27,12 @@ export class AuthserviceService {
         this.logIn = value;
       });
   }
+
+  // forgotPass(data) {
+  //   const url = "http://localhost:3000/api/auth/forgot-password";
+  //   return this.http.post(url, data)
+  //     .subscribe((value: any) => {
+  //       this.forgotPass = value;
+  //     });
+  // }
 }

@@ -11,6 +11,7 @@ import { SignupStudentComponent } from './signup-student/signup-student.componen
 import { HomeNavComponent } from './home-nav/home-nav.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     ListComponent,
     LoginStudentComponent,
     SignupStudentComponent,
-    HomeNavComponent
+    HomeNavComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
