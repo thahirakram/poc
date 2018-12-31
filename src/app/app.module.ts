@@ -12,6 +12,8 @@ import { HomeNavComponent } from './home-nav/home-nav.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetComponent } from './reset/reset.component';
+import { UsersComponent } from './users/users.component';
 
 
 
@@ -26,7 +28,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     LoginStudentComponent,
     SignupStudentComponent,
     HomeNavComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ResetComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

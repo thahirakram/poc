@@ -6,6 +6,8 @@ import { ListComponent } from './list/list.component';
 import { AuthGuard } from './services/auth.guard';
 import { SecondguardGuard } from './services/secondguard.guard';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { componentFactoryName } from '@angular/compiler';
+import { ResetComponent } from './reset/reset.component';
 
 const routes: Routes = [
   {
@@ -24,7 +26,12 @@ const routes: Routes = [
   {
     path: 'list',
     component: ListComponent
+  },
+  {
+    path: 'reset-password',
+    component: ResetComponent
   }
+   
 ];
 
 @NgModule({

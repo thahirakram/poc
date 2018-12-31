@@ -35,4 +35,13 @@ export class AuthserviceService {
         this.forgotPass = value;
       });
   }
+
+  
+  resetPass(data) {
+    const url = "http://localhost:3000/api/auth/reset-password";
+    return this.http.post(url, data)
+    .subscribe((value:  any) => {
+      this.resetPass = value;
+    });
+  }
 }
