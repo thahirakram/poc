@@ -13,25 +13,29 @@ const routes: Routes = [
   {
     path: '',
     component: LoginStudentComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'signup',
     component: SignupStudentComponent,
-    canActivate: [AuthGuard, SecondguardGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'forgot',
-    component: ForgotPasswordComponent
+    component: ForgotPasswordComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'list',
-    component: ListComponent
+    component: ListComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'reset-password',
-    component: ResetComponent
+    component: ResetComponent,
+    canActivate: [AuthGuard]
   }
-   
+
 ];
 
 @NgModule({

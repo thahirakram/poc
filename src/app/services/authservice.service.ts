@@ -15,8 +15,6 @@ export class AuthserviceService {
         this.signUp = value;
 
       });
-      
-
   }
   
 
