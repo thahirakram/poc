@@ -11,10 +11,10 @@ export class AuthserviceService {
   private next = '';
   subject = new BehaviorSubject(false);
   constructor(private http: HttpClient, private tokenServe: TokenService, private route: ActivatedRoute, private router: Router) {
-    this.subject.next(this.isLoggedIn);
-    this.route.queryParams.subscribe(params => {
-      this.next = params['next'] || '/';
-    })
+    // this.subject.next(this.isLoggedIn);
+    // this.route.queryParams.subscribe(params => {
+    //   this.next = params['next'] || '/';
+    // })
   }
 
   signUp(data) {
@@ -31,26 +31,24 @@ export class AuthserviceService {
     const url = "http://localhost:3000/api/auth/login";
     return this.http.post(url, data)
       .subscribe((value: any) => {
-        const token = value;
-        const tokenData = this.tokenServe.tokendecoded(token);
-        this.tokenServe.token = token;
-        this.subject.next(true);
-        this.router.navigate([this.next]);
-        return;
+        this.logIn = value;
+        // const tokenData = this.tokenServe.tokendecoded(token);
+        // this.tokenServe.token = token;
+        // this.subject.next(true);
+        // this.router.navigate([this.next]);
+        // return;
       });
   }
 
-  get isLoggedIn() {
-    return !!this.tokenServe.token;
-  }
+  // get isLoggedIn() {
+  //   return !!this.tokenServe.token;
+  // }
 
   logout() {
     this.tokenServe.token = '';
     this.subject.next(false);
     this.router.navigate(['/login']);
   }
-
-  //login auth ends
 
 
   forgotPass(data) {
