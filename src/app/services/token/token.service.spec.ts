@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { JwttokenService } from './jwttoken.service';
+import { TokenService } from './token.service';
 
-describe('JwttokenService', () => {
+describe('TokenService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: JwttokenService = TestBed.get(JwttokenService);
+    const service: TokenService = TestBed.get(TokenService);
     expect(service).toBeTruthy();
   });
 });

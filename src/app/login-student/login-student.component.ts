@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthserviceService } from '../services/authservice.service';
-import { JwttokenService } from '../jwttoken.service';
 
 @Component({
   selector: 'app-login-student',
@@ -14,7 +13,7 @@ export class LoginStudentComponent implements OnInit {
           password: ['',Validators.required],
         });
   constructor(private fb: FormBuilder,
-    private authService: AuthserviceService, private tokenserv: JwttokenService) { }
+    private authService: AuthserviceService) { }
 
   ngOnInit() {
   }
