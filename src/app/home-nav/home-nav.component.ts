@@ -23,11 +23,10 @@ export class HomeNavComponent implements OnInit {
 
   logout() {
     this.authServ.logout();
-    // Swal.fire({
-    //   type: 'success',
-    //   title: 'Oops...',
-    //   text: 'Logged out',
-    //   footer: '<a href>Why do I have this issue?</a>'
-    // })
+    Swal.fire({
+      type: 'success',
+      title: 'Logout',
+      text: 'success fully logged out'
+    });
   }
 }

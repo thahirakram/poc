@@ -38,9 +38,23 @@ export class AuthserviceService {
         this.tokenServe.token = token;
         this.subject.next(true);
         this.router.navigate([this.next]);
+        Swal.fire({
+          position: 'top-end',
+          type: 'success',
+          title: 'Login success',
+          showConfirmButton: false,
+          timer: 1500
+        })
         return;
-       
-      });
+      },
+        (error) => {
+          Swal.fire({
+            type: 'error',
+            title: 'Wrong credentials',
+            text: error.error.Message
+          });
+        }
+      );
   }
 
   get isLoggedIn() {
