@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthserviceService } from '../services/authservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login-student',
@@ -22,7 +23,14 @@ export class LoginStudentComponent implements OnInit {
   logIn() {
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
-    this.authService.logIn({email, password})
+    this.authService.logIn({email, password});
+    // Swal.fire({
+    //   position: 'top-end',
+    //   type: 'success',
+    //   title: 'Login success',
+    //   showConfirmButton: false,
+    //   timer: 1500
+    // })
   }
 
 

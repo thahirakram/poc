@@ -12,6 +12,7 @@ export class TokenService {
   }
 
   tokendecoded(token) {
+    console.log(token)
     const payload = token.split('.')[1];
     const decoded = JSON.parse(window.atob(payload));
     return decoded;
