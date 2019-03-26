@@ -15,7 +15,7 @@ export class AuthserviceService {
   constructor(private http: HttpClient, private tokenServe: TokenService, private route: ActivatedRoute, private router: Router) {
     this.subject.next(this.isLoggedIn);
     this.route.queryParams.subscribe(params => {
-      this.next = params['next'] || '/';
+      this.next = params['next'] || '/list';
     })
   }
 

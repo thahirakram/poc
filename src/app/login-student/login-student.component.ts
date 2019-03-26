@@ -10,8 +10,8 @@ import Swal from 'sweetalert2';
 })
 export class LoginStudentComponent implements OnInit {
         loginForm = this.fb.group({
-          email: ['',Validators.required],
-          password: ['',Validators.required],
+          email: ['thahirakram289@gmail.com',Validators.required],
+          password: ['thahir98',Validators.required],
         });
   constructor(private fb: FormBuilder,
     private authService: AuthserviceService) { }

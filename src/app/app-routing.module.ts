@@ -18,8 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'forgot',
-    component: ForgotPasswordComponent,
-    canActivate: [AuthGuard]
+    component: ForgotPasswordComponent
   },
   {
     path: 'list',
@@ -28,8 +27,7 @@ const routes: Routes = [
   },
   {
     path: 'reset-password',
-    component: ResetComponent,
-    canActivate: [AuthGuard]
+    component: ResetComponent
   },
   {
     path: '**',
