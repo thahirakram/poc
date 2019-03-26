@@ -49,8 +49,8 @@ export class AuthserviceService {
       },
         (error) => {
           Swal.fire({
-            type: 'error',
-            title: 'Wrong credentials',
+            type: 'info',
+            title: 'incorrect email and password',
             text: error.error.Message
           });
         }
